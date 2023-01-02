@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=VT323&display=swap');
+
+/* CSS principal del proyecto. */
+
+
+body{
+  position: absolute;
+  width: 100%;
+  background-color: #041C32;
+  
+}
+
+
+
+.bgrd{
+  background-color: #041C32;
+}
+
+.main{
+  display: flex;
+}
+
+.playground{
+  width: 50%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://play.pokemonshowdown.com/sprites/gen6bgs/bg-city.jpg"); /* Podemos extraer bgs aleatorios reemplazando la ultima parte del vinculo*/
+}
+
+.titilePlayground{
+  background-color: #04293A;
+  text-align: center;
+  width: 50%;
+  font-size: 2.3vw;
+  margin: 4% auto;
+  border-radius: 5px;
+  color: #ECB365;
+}
+.separador{
+  width: 100%;
+  height: 50px;
+
+}
+.charas{
+  height: 47%;
+}
+
+.lifeBar{
+  width: 170px;
+  text-align: center;
+  margin-left: 3%;
+  margin-bottom: 2%;
+  margin-top: 5px;
+}
+.lifeBar2{
+  width: 170px;
+  text-align: center;
+  margin-left: 3%;
+  margin-bottom: 2%;
+  margin-top: 5px;
+}
+
+.allyContainer{
+  height: 50%;
+  width: 50%;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.enemyContainer{
+  height: 50%;
+  width: 50%;
+  padding-top: 17%;
+  margin-left: 50%;
+  text-align: center;
+}
+
+.ally{
+  width: 90px;
+  height: 90px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.enemy{
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 120px;
+  max-height: 120px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.contentHpBar{
+  margin-left: 70px;
+  margin-bottom: 10px;
+  background-color: rgb(63, 62, 61);
+  width: 15vw;
+  height: 12vh;
+  border-radius: 10px;
+  padding-left: 4px;
+  transform: skewX(-7deg);
+}
+.contentHpBarContent{
+  background-color: rgb(145, 142, 142);
+  margin: 1px;
+  border-radius: 10px;
+  
+}
+.tipoPoke{
+  font-size: 1.2vw;
+  border: 0.5px solid white;
+  font-family: 'VT323', monospace;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.flexNombre{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+  font-size: 1.3vw;
+  font-family: 'VT323', monospace;
+}
+
+.nombreBar{
+  margin-left: 10px;
+  font-size: 1.3vw;
+  font-family: 'VT323', monospace;
+  text-align: center;
+}
+
+.hpCounter{
+  font-size: 1.3vw;
+  font-family: 'VT323', monospace;
+}
+
+.nombreBarDerrotado{
+  font-family: 'VT323', monospace;
+    font-size: 0.8vw;
+}
+.porcentageBar{
+  font-family: 'VT323', monospace;
+  margin-top: 1px;
+}
+.lifeBarContainer{
+  background-color: #2e353b;
+}
+.enemy:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  filter: brightness(70%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s;
+}
+.ally:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  filter: brightness(70%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s;
+}
+.enemyDown{
+  width: 80px;
+  height: 80px;
+  filter: grayscale(100%) brightness(80%);
+  transform: scale(1.1);
+  margin-right: -10px;
+}
+.playgroundFooter{
+  height: 23.5%;
+  display: flex;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  align-items: center;
+  margin-top: 21vh;
+  background-color: #04293A;
+}
+.imgModal{
+  width: 130px;
+}
+
+.imgPokeModal{
+  display: flex;
+  align-items: center;
+}
+.footerP{
+  text-align: center;
+  font-family: 'VT323', monospace;
+  width: 50%;
+  font-size: 2.5vw;
+  color: #ECB365;
+  transition: transform 0.5s; /* tiempo en segundos */
+}
+.footerP:hover {
+  transform: scale(0.7);
+}
+.linkFooter{
+  color: #fff;
+  transition: font-size 0.8s, color 0.5s /* tiempo en segundos */
+}
+.linkFooter:hover{
+  color: rgb(150, 110, 0);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 180%;
+}
+.botones{
+  border-left: 1px solid rgb(255, 255, 255);
+  background-color: #04293A;
+  width: 50%;
+  height: 100%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.boton {
+  width: 10vw;
+  height: 6vh;
+  font-size: 1.3vw;
+  font-family: 'VT323', monospace;
+  transform: skewX(7deg);
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #064663;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.botonDes {
+  width: 10vw;
+  height: 6vh;
+  font-size: 1.1vw;
+  transform: skewX(7deg);
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #064663;
+  opacity: .5;
+}
+.boton:hover {
+  transform: scale(1.1) skewX(-7deg);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  border: 1px solid #064663;
+  background: white;
+  color: #064663;
+}
+.boton:active {
+  transform: scale(0.95);
+}
+
+.logg{
+  width: 50%;
+  height: 82.5vh;
+}
+.titleContainer{
+  background-color: #064663;
+  min-height: 6vh;
+  font-family: 'VT323', monospace;
+}
+.title1{
+  font-size: 2.2vw;
+}
+.title2{
+  background-color: #6f5e72;
+  font-size: 1.45vw;
+  padding-top: 7px;
+}
+.contentLogContent{
+  height: 100%;
+  width: 100%;
+}
+.logList{
+  height: 75vh;
+  width: 100%;
+  font-family: 'VT323', monospace;
+  font-size: 1.5vw;
+}
+
+.bg-transition {
+  transition: background-color 0.5s;
+}
+
+.banner { /* header je */
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 10vh;
+  background-color: #064663;
+
+
+}
+
+.banner h1{
+  font-size: 5vh;
+  padding: 0 10px;
+  font-family: 'VT323', monospace;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logo de la pagina */
+.logo{
+  display: flex;
+  margin-block-start: 3px;
+  margin-block-end: 3px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.logo img{
+  margin: 0px 0px 0px 5px;
+  display: flex;
+  filter: invert(1);
+  padding: 0px;
+  padding: 0px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main{
+   display: block;
+  }
+
+  .banner{
+    height: 6vh;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+
+  .banner h1 {
+    font-size: 2vh;
+  }
+
+  .boton{
+    font-size: 3vw;
+    width: 23vw;
+    height: 7vh;
+  }
+  .footerP{
+    font-size: 5.5vw;
+  }
+  .logList{
+    font-size: 6.5vw
+  }
+  
+  .lvlBar {
+    font-size: 3vw;
+  }
+
+  .hpCounter{
+    height: 4vw;
+    font-size: 3vw;
+  }
+
+  .mobile-hp-section{
+  width: 100% !important;
+  }
+
+  .ally{
+    width: 60px;
+    height: 60px;
+  }
+  
+  .enemy{
+    min-width: 60px;
+    height: 60px;
+    width: 80px;
+  }
+  
+  .botones{
+    padding-top: 9%;
+    width: 65%;
+    height: 96%;
+  }
+
+  .title2{
+    width: 100% !important; 
+  }
+
+  .boton .botonDes{
+    width: 15vw;
+  }
+
+  .tipoPoke{
+    height: 6vw;
+    font-size: 3.5vw;
+  }
+  
+  .playground{
+    width: 100%;
+    height: 80vh;
+  }
+  .playgroundFooter{
+    margin-top: 25%;
+    height: 31.5%;
+  }
+  .contentHpBar{
+    width: 35vw;
+    height: 26vw;
+    margin-left: 15%;
+  }
+  .contentHpBarContent{
+    height: 11vh;
+  }
+  .nombreBar{
+    font-size: 1rem;
+  }
+  .nombreBarDerrotado{
+    font-size: 2.2vw;
+  }
+  .logg{
+    width: 100%;
+  }
+  .title1,.title2{
+    font-size: 1rem;
+  }
+  .logContentTitle{
+    font-size: 3vw;
+  }
+  .logContent{
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+
+/* Pie de pagina */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #064663;
+}
+
+/* Texto izquierdo del pie */
+.footer-left{
+  display: flex;
+ align-items: center;
+}
+
+.text-music{
+  padding-top: 6px;
+  padding-left: 6px;
+  margin-right: 10px;
+}
+.volumeContainer{
+  height: 100%;
+  width: 150px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.musicVolume{
+  margin-left: 20px;
+  
+}
+
+/* Icono de github derecho del pie */
+.footer-right{
+  margin-top: 10px;
+  padding-right: 40px;
+}
+
+.icon-style {
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 5px;
+  filter: invert(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.icon-style:hover{
+  filter: brightness(70%);
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s;
+}
+
